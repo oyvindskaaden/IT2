@@ -1,0 +1,10 @@
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\bin\Debug\OppgaverFunksjoner.exe.config
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\bin\Debug\OppgaverFunksjoner.exe
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\bin\Debug\OppgaverFunksjoner.pdb
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.csprojResolveAssemblyReference.cache
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.Properties.Resources.resources
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.csproj.GenerateResource.Cache
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.csproj.CoreCompileInputs.cache
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.exe
+c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.pdb
+C:\Users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.OppgaverFunksjoner.resources

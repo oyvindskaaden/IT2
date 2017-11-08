@@ -1,0 +1,10 @@
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\bin\Debug\OppgaverUke36.exe.config
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\bin\Debug\OppgaverUke36.exe
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\bin\Debug\OppgaverUke36.pdb
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.csprojResolveAssemblyReference.cache
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.oppgaver_uke36.resources
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.Properties.Resources.resources
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.csproj.GenerateResource.Cache
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.csproj.CoreCompileInputs.cache
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.exe
+C:\Users\oyvin\source\repos\OppgaverUke36\OppgaverUke36\obj\Debug\OppgaverUke36.pdb
