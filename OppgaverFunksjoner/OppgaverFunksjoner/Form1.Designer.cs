@@ -42,6 +42,9 @@
             this.textOppg1b = new System.Windows.Forms.TextBox();
             this.textOppg1a = new System.Windows.Forms.TextBox();
             this.oppgave2 = new System.Windows.Forms.TabPage();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.textEven = new System.Windows.Forms.TextBox();
             this.btEven = new System.Windows.Forms.Button();
@@ -106,15 +109,12 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label11 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
             this.inne = new System.Windows.Forms.TabPage();
-            this.btCont = new System.Windows.Forms.Button();
-            this.tbStr = new System.Windows.Forms.TextBox();
-            this.tbCheck = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
             this.tbContRet = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.tbCheck = new System.Windows.Forms.TextBox();
+            this.tbStr = new System.Windows.Forms.TextBox();
+            this.btCont = new System.Windows.Forms.Button();
             this.tabControl.SuspendLayout();
             this.oppgave1.SuspendLayout();
             this.oppgave2.SuspendLayout();
@@ -284,6 +284,33 @@
             this.oppgave2.TabIndex = 1;
             this.oppgave2.Text = "Oppgave 2";
             this.oppgave2.UseVisualStyleBackColor = true;
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Location = new System.Drawing.Point(142, 33);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(27, 13);
+            this.label12.TabIndex = 22;
+            this.label12.Text = "Max";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Location = new System.Drawing.Point(58, 33);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(24, 13);
+            this.label13.TabIndex = 21;
+            this.label13.Text = "Min";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Location = new System.Drawing.Point(100, 82);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(27, 13);
+            this.label11.TabIndex = 20;
+            this.label11.Text = "Max";
             // 
             // label10
             // 
@@ -842,33 +869,6 @@
             this.textBox1.TabIndex = 0;
             this.textBox1.DoubleClick += new System.EventHandler(this.tbDClick);
             // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(100, 82);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(27, 13);
-            this.label11.TabIndex = 20;
-            this.label11.Text = "Max";
-            // 
-            // label12
-            // 
-            this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(142, 33);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(27, 13);
-            this.label12.TabIndex = 22;
-            this.label12.Text = "Max";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(58, 33);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(24, 13);
-            this.label13.TabIndex = 21;
-            this.label13.Text = "Min";
-            // 
             // inne
             // 
             this.inne.Controls.Add(this.tbContRet);
@@ -884,29 +884,12 @@
             this.inne.Text = "Inneholder";
             this.inne.UseVisualStyleBackColor = true;
             // 
-            // btCont
+            // tbContRet
             // 
-            this.btCont.Location = new System.Drawing.Point(323, 92);
-            this.btCont.Name = "btCont";
-            this.btCont.Size = new System.Drawing.Size(75, 23);
-            this.btCont.TabIndex = 0;
-            this.btCont.Text = "Check";
-            this.btCont.UseVisualStyleBackColor = true;
-            this.btCont.Click += new System.EventHandler(this.btCont_Click);
-            // 
-            // tbStr
-            // 
-            this.tbStr.Location = new System.Drawing.Point(8, 6);
-            this.tbStr.Name = "tbStr";
-            this.tbStr.Size = new System.Drawing.Size(392, 20);
-            this.tbStr.TabIndex = 1;
-            // 
-            // tbCheck
-            // 
-            this.tbCheck.Location = new System.Drawing.Point(8, 56);
-            this.tbCheck.Name = "tbCheck";
-            this.tbCheck.Size = new System.Drawing.Size(392, 20);
-            this.tbCheck.TabIndex = 2;
+            this.tbContRet.Location = new System.Drawing.Point(323, 122);
+            this.tbContRet.Name = "tbContRet";
+            this.tbContRet.Size = new System.Drawing.Size(75, 20);
+            this.tbContRet.TabIndex = 4;
             // 
             // label14
             // 
@@ -917,15 +900,33 @@
             this.label14.TabIndex = 3;
             this.label14.Text = "Contains?";
             // 
-            // tbContRet
+            // tbCheck
             // 
-            this.tbContRet.Location = new System.Drawing.Point(323, 122);
-            this.tbContRet.Name = "tbContRet";
-            this.tbContRet.Size = new System.Drawing.Size(75, 20);
-            this.tbContRet.TabIndex = 4;
+            this.tbCheck.Location = new System.Drawing.Point(8, 56);
+            this.tbCheck.Name = "tbCheck";
+            this.tbCheck.Size = new System.Drawing.Size(392, 20);
+            this.tbCheck.TabIndex = 2;
+            // 
+            // tbStr
+            // 
+            this.tbStr.Location = new System.Drawing.Point(8, 6);
+            this.tbStr.Name = "tbStr";
+            this.tbStr.Size = new System.Drawing.Size(392, 20);
+            this.tbStr.TabIndex = 1;
+            // 
+            // btCont
+            // 
+            this.btCont.Location = new System.Drawing.Point(323, 92);
+            this.btCont.Name = "btCont";
+            this.btCont.Size = new System.Drawing.Size(75, 23);
+            this.btCont.TabIndex = 0;
+            this.btCont.Text = "Check";
+            this.btCont.UseVisualStyleBackColor = true;
+            this.btCont.Click += new System.EventHandler(this.btCont_Click);
             // 
             // OppgaverFunksjoner
             // 
+            this.AcceptButton = this.btCont;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(414, 310);

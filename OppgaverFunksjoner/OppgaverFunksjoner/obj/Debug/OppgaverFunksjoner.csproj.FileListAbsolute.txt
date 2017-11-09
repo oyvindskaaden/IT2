@@ -8,3 +8,13 @@ c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\Oppg
 c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.exe
 c:\users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.pdb
 C:\Users\oyvin\source\repos\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.OppgaverFunksjoner.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\bin\Debug\OppgaverFunksjoner.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\bin\Debug\OppgaverFunksjoner.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\bin\Debug\OppgaverFunksjoner.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.csprojResolveAssemblyReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.OppgaverFunksjoner.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\OppgaverFunksjoner\OppgaverFunksjoner\obj\Debug\OppgaverFunksjoner.pdb
