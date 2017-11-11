@@ -1,0 +1,10 @@
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\bin\Debug\Adressebok.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\bin\Debug\Adressebok.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\bin\Debug\Adressebok.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.csprojResolveAssemblyReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\Adressebok\Adressebok\obj\Debug\Adressebok.Adressebok.resources
