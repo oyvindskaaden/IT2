@@ -17,7 +17,13 @@ namespace Adressebok
             InitializeComponent();
         }
 
+        #region Globale variabler
+
+        int index = 0;
+
         List<Oppføring> bok = new List<Oppføring>();
+
+        #endregion
 
         private void Adressebok_Load(object sender, EventArgs e)
         {
@@ -31,17 +37,18 @@ namespace Adressebok
 
 
             bok.Add(new Oppføring("Øyvind", "Skaaden", 94981952, "Butterudveien 10"));
+            bok.Add(new Oppføring("Torje", "Eikenes", 92938293, "Nibbaveien 10"));
+            bok.Add(new Oppføring("Nibb", "Nibbsen", 42069420, "Nibbstveien 69"));
+
+            Presenter();
         }
+        
 
         private void btLogin_Click(object sender, EventArgs e)
         {
             pLogin.Visible = false;
             pShow.Visible = true;
 
-            tbFNavn.Text = bok[0].Fornavn;
-            tbENavn.Text = bok[0].Etternavn;
-            tbNr.Text = "" + bok[0].Nummer;
-            tbAddr.Text = bok[0].Adresse;
         }
 
         private void btSearch_Click(object sender, EventArgs e)
@@ -52,7 +59,21 @@ namespace Adressebok
 
         private void btNav(object sender, EventArgs e)
         {
-
+            Button b = sender as Button;
+            switch (b.Text)
+            {
+                case "<--":
+                    index--;
+                    if (index < 0)
+                        index = 0;
+                    break;
+                case "-->":
+                    index++;
+                    if (index >= bok.Count)
+                        index = bok.Count - 1;
+                    break;
+            }
+            Presenter();
         }
 
         private void btSave_Click(object sender, EventArgs e)
@@ -63,6 +84,21 @@ namespace Adressebok
         private void DoSearch(object sender, EventArgs e)
         {
 
+        }
+
+        private void Presenter()
+        {
+            try
+            {
+                tbFNavn.Text = bok[index].Fornavn;
+                tbENavn.Text = bok[index].Etternavn;
+                tbNr.Text = "" + bok[index].Nummer;
+                tbAddr.Text = bok[index].Adresse;
+            }
+            catch
+            {
+                tbFNavn.Text = "Ingen lagrede adresser!";
+            }
         }
     }
 }
