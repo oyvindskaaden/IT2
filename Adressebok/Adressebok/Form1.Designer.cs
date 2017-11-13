@@ -40,6 +40,7 @@
             this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.fav = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pShow = new System.Windows.Forms.Panel();
+            this.btNy = new System.Windows.Forms.Button();
             this.btSave = new System.Windows.Forms.Button();
             this.btRight = new System.Windows.Forms.Button();
             this.btSearch = new System.Windows.Forms.Button();
@@ -155,6 +156,7 @@
             // 
             // pShow
             // 
+            this.pShow.Controls.Add(this.btNy);
             this.pShow.Controls.Add(this.btSave);
             this.pShow.Controls.Add(this.btRight);
             this.pShow.Controls.Add(this.btSearch);
@@ -173,14 +175,25 @@
             this.pShow.Size = new System.Drawing.Size(352, 196);
             this.pShow.TabIndex = 3;
             // 
+            // btNy
+            // 
+            this.btNy.Location = new System.Drawing.Point(179, 158);
+            this.btNy.Name = "btNy";
+            this.btNy.Size = new System.Drawing.Size(75, 23);
+            this.btNy.TabIndex = 13;
+            this.btNy.Text = "Ny Oppføring";
+            this.btNy.UseVisualStyleBackColor = true;
+            this.btNy.Click += new System.EventHandler(this.btNy_Click);
+            // 
             // btSave
             // 
-            this.btSave.Location = new System.Drawing.Point(179, 158);
+            this.btSave.Location = new System.Drawing.Point(179, 126);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(75, 23);
             this.btSave.TabIndex = 12;
             this.btSave.Text = "Lagre";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Visible = false;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // btRight
@@ -222,6 +235,7 @@
             this.starCheck.TabIndex = 8;
             this.starCheck.Text = "Favoritt";
             this.starCheck.UseVisualStyleBackColor = true;
+            this.starCheck.CheckedChanged += new System.EventHandler(this.updateFav);
             // 
             // label4
             // 
@@ -247,6 +261,7 @@
             this.tbAddr.Name = "tbAddr";
             this.tbAddr.Size = new System.Drawing.Size(152, 20);
             this.tbAddr.TabIndex = 5;
+            this.tbAddr.TextChanged += new System.EventHandler(this.chBt);
             // 
             // label2
             // 
@@ -272,6 +287,7 @@
             this.tbNr.Name = "tbNr";
             this.tbNr.Size = new System.Drawing.Size(152, 20);
             this.tbNr.TabIndex = 2;
+            this.tbNr.TextChanged += new System.EventHandler(this.chBt);
             // 
             // tbENavn
             // 
@@ -279,6 +295,7 @@
             this.tbENavn.Name = "tbENavn";
             this.tbENavn.Size = new System.Drawing.Size(152, 20);
             this.tbENavn.TabIndex = 1;
+            this.tbENavn.TextChanged += new System.EventHandler(this.chBt);
             // 
             // tbFNavn
             // 
@@ -286,6 +303,7 @@
             this.tbFNavn.Name = "tbFNavn";
             this.tbFNavn.Size = new System.Drawing.Size(152, 20);
             this.tbFNavn.TabIndex = 0;
+            this.tbFNavn.TextChanged += new System.EventHandler(this.chBt);
             // 
             // adressebok
             // 
@@ -338,6 +356,7 @@
         private System.Windows.Forms.DataGridViewCheckBoxColumn fav;
         private System.Windows.Forms.Button btSok;
         private System.Windows.Forms.TextBox tbSok;
+        private System.Windows.Forms.Button btNy;
     }
 }
 

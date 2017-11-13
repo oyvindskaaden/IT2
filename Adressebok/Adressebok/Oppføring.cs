@@ -12,7 +12,7 @@ namespace Adressebok
         private string eNavn;
         private int nr;
         private string adresse;
-        private bool star;
+        private bool star = false;
         
         #region Konstruktør
 

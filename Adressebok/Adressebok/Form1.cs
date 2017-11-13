@@ -21,6 +21,9 @@ namespace Adressebok
 
         int index = 0;
 
+        bool edited = false;
+        bool present = false;
+
         List<Oppføring> bok = new List<Oppføring>();
 
         #endregion
@@ -34,7 +37,6 @@ namespace Adressebok
             }
 
             pLogin.Visible = true;
-
 
             bok.Add(new Oppføring("Øyvind", "Skaaden", 94981952, "Butterudveien 10"));
             bok.Add(new Oppføring("Torje", "Eikenes", 92938293, "Nibbaveien 10"));
@@ -78,7 +80,23 @@ namespace Adressebok
 
         private void btSave_Click(object sender, EventArgs e)
         {
+            btSave.Visible = false;
+            btNy.Visible = true;
 
+            if (!edited && index == bok.Count)
+            {
+                bok.Add(new Oppføring(tbFNavn.Text, tbENavn.Text, Convert.ToInt32(tbNr.Text), tbAddr.Text));
+            }
+            else if (edited)
+            {
+                tbFNavn.Text = bok[index].Fornavn;
+                tbENavn.Text = bok[index].Etternavn;
+                tbNr.Text = "" + bok[index].Nummer;
+                tbAddr.Text = bok[index].Adresse;
+                starCheck.Checked = bok[index].Favoritt;
+            }
+
+            edited = false;
         }
 
         private void DoSearch(object sender, EventArgs e)
@@ -88,17 +106,58 @@ namespace Adressebok
 
         private void Presenter()
         {
+            present = true;
             try
             {
                 tbFNavn.Text = bok[index].Fornavn;
                 tbENavn.Text = bok[index].Etternavn;
                 tbNr.Text = "" + bok[index].Nummer;
                 tbAddr.Text = bok[index].Adresse;
+                starCheck.Checked = bok[index].Favoritt;
             }
             catch
             {
                 tbFNavn.Text = "Ingen lagrede adresser!";
             }
+        }
+
+        private void updateFav(object sender, EventArgs e)
+        {
+            bok[index].Favoritt = starCheck.Checked; 
+            Presenter();
+
+        }
+
+        private void btNy_Click(object sender, EventArgs e)
+        {
+            index = bok.Count;
+
+            tbFNavn.Text = "";
+            tbENavn.Text = "";
+            tbNr.Text = "";
+            tbAddr.Text = "";
+            starCheck.Checked = false;
+
+        }
+
+        private void chBt(object sender, EventArgs e)
+        {
+            if (!present)
+            {
+                btNy.Visible = false;
+                btSave.Visible = true;
+                edited = true;
+                    
+                if (index != bok.Count)
+                {
+                    btSave.Text = "Lagre endringer";
+                }
+                else if (index == bok.Count)
+                {
+                    btSave.Text = "Lagre ny";
+                }
+            }
+            present = false;
         }
     }
 }
