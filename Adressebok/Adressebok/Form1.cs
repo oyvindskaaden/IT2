@@ -142,6 +142,11 @@ namespace Adressebok
 
         private void chBt(object sender, EventArgs e)
         {
+        }
+
+        private void chBt(object sender, KeyPressEventArgs e)
+        {
+
             if (!present)
             {
                 btNy.Visible = false;

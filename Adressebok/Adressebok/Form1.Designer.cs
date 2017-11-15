@@ -261,7 +261,7 @@
             this.tbAddr.Name = "tbAddr";
             this.tbAddr.Size = new System.Drawing.Size(152, 20);
             this.tbAddr.TabIndex = 5;
-            this.tbAddr.TextChanged += new System.EventHandler(this.chBt);
+            this.tbAddr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chBt);
             // 
             // label2
             // 
@@ -287,7 +287,7 @@
             this.tbNr.Name = "tbNr";
             this.tbNr.Size = new System.Drawing.Size(152, 20);
             this.tbNr.TabIndex = 2;
-            this.tbNr.TextChanged += new System.EventHandler(this.chBt);
+            this.tbNr.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chBt);
             // 
             // tbENavn
             // 
@@ -295,7 +295,7 @@
             this.tbENavn.Name = "tbENavn";
             this.tbENavn.Size = new System.Drawing.Size(152, 20);
             this.tbENavn.TabIndex = 1;
-            this.tbENavn.TextChanged += new System.EventHandler(this.chBt);
+            this.tbENavn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chBt);
             // 
             // tbFNavn
             // 
@@ -303,7 +303,7 @@
             this.tbFNavn.Name = "tbFNavn";
             this.tbFNavn.Size = new System.Drawing.Size(152, 20);
             this.tbFNavn.TabIndex = 0;
-            this.tbFNavn.TextChanged += new System.EventHandler(this.chBt);
+            this.tbFNavn.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.chBt);
             // 
             // adressebok
             // 
