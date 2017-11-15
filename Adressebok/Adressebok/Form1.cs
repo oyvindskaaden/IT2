@@ -21,8 +21,9 @@ namespace Adressebok
 
         int index = 0;
 
-        bool edited = false;
-        bool present = false;
+        bool nyOpp = false;
+
+        TextBox[] innData;
 
         List<Oppføring> bok = new List<Oppføring>();
 
@@ -30,12 +31,16 @@ namespace Adressebok
 
         private void Adressebok_Load(object sender, EventArgs e)
         {
+            innData = new TextBox[] { tbNyFNavn, tbNyENavn, tbNyAddr };
+            pLogin.Location = new Point(0,0);
+
             foreach( Panel p in this.Controls.OfType<Panel>())
             {
                 p.Visible = false;
                 p.Location = pLogin.Location;
             }
 
+            pShow.Location = new Point(0, 27);
             pLogin.Visible = true;
 
             bok.Add(new Oppføring("Øyvind", "Skaaden", 94981952, "Butterudveien 10"));
@@ -48,15 +53,14 @@ namespace Adressebok
 
         private void btLogin_Click(object sender, EventArgs e)
         {
-            pLogin.Visible = false;
-            pShow.Visible = true;
+            ShowPanel(pShow);
+            m1.Visible = true;
 
         }
 
         private void btSearch_Click(object sender, EventArgs e)
         {
-            pShow.Visible = false;
-            pSok.Visible = true;
+            ShowPanel(pSok);
         }
 
         private void btNav(object sender, EventArgs e)
@@ -80,38 +84,31 @@ namespace Adressebok
 
         private void btSave_Click(object sender, EventArgs e)
         {
-            btSave.Visible = false;
-            btNy.Visible = true;
-
-            if (!edited && index == bok.Count)
+            if (nyOpp)
             {
-                bok.Add(new Oppføring(tbFNavn.Text, tbENavn.Text, Convert.ToInt32(tbNr.Text), tbAddr.Text));
+                index = bok.Count;
+                bok.Add(new Oppføring(tbFNavn.Text, tbENavn.Text, Convert.ToInt32(numNr.Value), tbAddr.Text));
             }
-            else if (edited)
-            {
+            else if (!nyOpp)
+            { 
                 tbFNavn.Text = bok[index].Fornavn;
                 tbENavn.Text = bok[index].Etternavn;
-                tbNr.Text = "" + bok[index].Nummer;
+                numNr.Value = bok[index].Nummer;
                 tbAddr.Text = bok[index].Adresse;
                 starCheck.Checked = bok[index].Favoritt;
             }
 
-            edited = false;
-        }
-
-        private void DoSearch(object sender, EventArgs e)
-        {
-
+            ShowPanel(pShow);
+            Presenter();
         }
 
         private void Presenter()
         {
-            present = true;
             try
             {
                 tbFNavn.Text = bok[index].Fornavn;
                 tbENavn.Text = bok[index].Etternavn;
-                tbNr.Text = "" + bok[index].Nummer;
+                numNr.Value = bok[index].Nummer;
                 tbAddr.Text = bok[index].Adresse;
                 starCheck.Checked = bok[index].Favoritt;
             }
@@ -121,48 +118,61 @@ namespace Adressebok
             }
         }
 
-        private void updateFav(object sender, EventArgs e)
+        private void søkTM_Click(object sender, EventArgs e)
         {
-            bok[index].Favoritt = starCheck.Checked; 
-            Presenter();
 
         }
 
-        private void btNy_Click(object sender, EventArgs e)
+        private void newOpp_Click(object sender, EventArgs e)
         {
-            index = bok.Count;
+            nyOpp = true;
+            ClearTB();
+            btSave.Text = "Lagre ny";
+            ShowPanel(pNew);
+        }
 
-            tbFNavn.Text = "";
-            tbENavn.Text = "";
-            tbNr.Text = "";
-            tbAddr.Text = "";
-            starCheck.Checked = false;
+        private void chOpp_Click(object sender, EventArgs e)
+        {
+            getNyTB();
+            btSave.Text = "Endre";
+            ShowPanel(pNew);
+        }
+
+        private void mSlett_Click(object sender, EventArgs e)
+        {
 
         }
 
-        private void chBt(object sender, EventArgs e)
-        {
-        }
+        #region Egene metoder
 
-        private void chBt(object sender, KeyPressEventArgs e)
+        // Skjuler alle paneler i form1, og viser det angitte panelet
+        private void ShowPanel(Panel p)
         {
-
-            if (!present)
+            foreach(Panel pa in this.Controls.OfType<Panel>())
             {
-                btNy.Visible = false;
-                btSave.Visible = true;
-                edited = true;
-                    
-                if (index != bok.Count)
-                {
-                    btSave.Text = "Lagre endringer";
-                }
-                else if (index == bok.Count)
-                {
-                    btSave.Text = "Lagre ny";
-                }
+                pa.Visible = false;
             }
-            present = false;
+            p.Visible = true;
         }
+
+        private void ClearTB()
+        {
+            foreach (TextBox tb in innData)
+            {
+                tb.Text = "";
+            }
+            numNyNr.Value = 0;
+        }
+
+        private void getNyTB()
+        {
+            tbNyFNavn.Text = bok[index].Fornavn;
+            tbNyENavn.Text = bok[index].Etternavn;
+            numNyNr.Value = bok[index].Nummer;
+            tbNyAddr.Text = bok[index].Adresse;
+            checkSave.Checked = bok[index].Favoritt;
+        }
+
+        #endregion
     }
 }
