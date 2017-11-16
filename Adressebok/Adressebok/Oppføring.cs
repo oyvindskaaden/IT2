@@ -10,7 +10,7 @@ namespace Adressebok
     {
         private string fNavn;
         private string eNavn;
-        private int nr;
+        private decimal nr;
         private string adresse;
         private bool star = false;
         
@@ -21,12 +21,21 @@ namespace Adressebok
 
         }
 
-        public Oppføring(string f, string e, int n, string a)
+        public Oppføring(string fornavn, string etternavn, decimal nummer, string adr)
         {
-            fNavn = f;
-            eNavn = e;
-            nr = n;
-            adresse = a;
+            fNavn = fornavn;
+            eNavn = etternavn;
+            nr = nummer;
+            adresse = adr;
+        }
+
+        public Oppføring(string fornavn, string etternavn, decimal nummer, string adr, bool favorite)
+        {
+            fNavn = fornavn;
+            eNavn = etternavn;
+            nr = nummer;
+            adresse = adr;
+            star = favorite;
         }
         #endregion
 
@@ -43,7 +52,7 @@ namespace Adressebok
             set { eNavn = value; }
         }
         
-        public int Nummer
+        public decimal Nummer
         {
             get { return nr; }
             set { nr = value; }

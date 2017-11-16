@@ -32,14 +32,17 @@
             this.btLogin = new System.Windows.Forms.Button();
             this.tbPass = new System.Windows.Forms.TextBox();
             this.pSok = new System.Windows.Forms.Panel();
+            this.btCans = new System.Windows.Forms.Button();
             this.btSok = new System.Windows.Forms.Button();
             this.tbSok = new System.Windows.Forms.TextBox();
-            this.søkList = new System.Windows.Forms.DataGridView();
+            this.sokList = new System.Windows.Forms.DataGridView();
+            this.inx = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.navn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nummer = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.adresse = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.fav = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.pShow = new System.Windows.Forms.Panel();
+            this.labPlass = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.numNr = new System.Windows.Forms.NumericUpDown();
             this.btRight = new System.Windows.Forms.Button();
             this.btLeft = new System.Windows.Forms.Button();
@@ -52,6 +55,8 @@
             this.tbENavn = new System.Windows.Forms.TextBox();
             this.tbFNavn = new System.Windows.Forms.TextBox();
             this.pNew = new System.Windows.Forms.Panel();
+            this.btAvbryt = new System.Windows.Forms.Button();
+            this.numNyNr = new System.Windows.Forms.NumericUpDown();
             this.btSave = new System.Windows.Forms.Button();
             this.checkSave = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -66,16 +71,14 @@
             this.newOpp = new System.Windows.Forms.ToolStripMenuItem();
             this.chOpp = new System.Windows.Forms.ToolStripMenuItem();
             this.mSlett = new System.Windows.Forms.ToolStripMenuItem();
-            this.numNyNr = new System.Windows.Forms.NumericUpDown();
-            this.btAvbryt = new System.Windows.Forms.Button();
             this.pLogin.SuspendLayout();
             this.pSok.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.søkList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sokList)).BeginInit();
             this.pShow.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNr)).BeginInit();
             this.pNew.SuspendLayout();
-            this.m1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNyNr)).BeginInit();
+            this.m1.SuspendLayout();
             this.SuspendLayout();
             // 
             // pLogin
@@ -108,42 +111,68 @@
             // pSok
             // 
             this.pSok.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.pSok.Controls.Add(this.btCans);
             this.pSok.Controls.Add(this.btSok);
             this.pSok.Controls.Add(this.tbSok);
-            this.pSok.Controls.Add(this.søkList);
+            this.pSok.Controls.Add(this.sokList);
             this.pSok.Location = new System.Drawing.Point(381, 36);
             this.pSok.Name = "pSok";
-            this.pSok.Size = new System.Drawing.Size(398, 275);
+            this.pSok.Size = new System.Drawing.Size(410, 280);
             this.pSok.TabIndex = 2;
+            // 
+            // btCans
+            // 
+            this.btCans.Location = new System.Drawing.Point(271, 12);
+            this.btCans.Name = "btCans";
+            this.btCans.Size = new System.Drawing.Size(75, 23);
+            this.btCans.TabIndex = 3;
+            this.btCans.Text = "Avbryt";
+            this.btCans.UseVisualStyleBackColor = true;
+            this.btCans.Click += new System.EventHandler(this.Cancel);
             // 
             // btSok
             // 
-            this.btSok.Location = new System.Drawing.Point(190, 64);
+            this.btSok.Location = new System.Drawing.Point(190, 12);
             this.btSok.Name = "btSok";
             this.btSok.Size = new System.Drawing.Size(75, 23);
             this.btSok.TabIndex = 2;
             this.btSok.Text = "Søk";
             this.btSok.UseVisualStyleBackColor = true;
+            this.btSok.Click += new System.EventHandler(this.btSearch_Click);
             // 
             // tbSok
             // 
-            this.tbSok.Location = new System.Drawing.Point(3, 66);
+            this.tbSok.Location = new System.Drawing.Point(3, 14);
             this.tbSok.Name = "tbSok";
             this.tbSok.Size = new System.Drawing.Size(180, 20);
             this.tbSok.TabIndex = 1;
+            this.tbSok.TextChanged += new System.EventHandler(this.btSearch_Click);
             // 
-            // søkList
+            // sokList
             // 
-            this.søkList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.søkList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.sokList.AllowUserToAddRows = false;
+            this.sokList.AllowUserToDeleteRows = false;
+            this.sokList.AllowUserToResizeRows = false;
+            this.sokList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.sokList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.inx,
             this.navn,
             this.nummer,
-            this.adresse,
-            this.fav});
-            this.søkList.Location = new System.Drawing.Point(3, 92);
-            this.søkList.Name = "søkList";
-            this.søkList.Size = new System.Drawing.Size(393, 150);
-            this.søkList.TabIndex = 0;
+            this.adresse});
+            this.sokList.Location = new System.Drawing.Point(3, 40);
+            this.sokList.Name = "sokList";
+            this.sokList.Size = new System.Drawing.Size(403, 237);
+            this.sokList.TabIndex = 0;
+            this.sokList.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.getSearch);
+            // 
+            // inx
+            // 
+            this.inx.HeaderText = "Plassering";
+            this.inx.Name = "inx";
+            this.inx.ReadOnly = true;
+            this.inx.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.inx.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
+            this.inx.Width = 60;
             // 
             // navn
             // 
@@ -163,15 +192,10 @@
             this.adresse.Name = "adresse";
             this.adresse.ReadOnly = true;
             // 
-            // fav
-            // 
-            this.fav.HeaderText = "Favoritt";
-            this.fav.Name = "fav";
-            this.fav.ReadOnly = true;
-            this.fav.Width = 50;
-            // 
             // pShow
             // 
+            this.pShow.Controls.Add(this.labPlass);
+            this.pShow.Controls.Add(this.label9);
             this.pShow.Controls.Add(this.numNr);
             this.pShow.Controls.Add(this.btRight);
             this.pShow.Controls.Add(this.btLeft);
@@ -183,14 +207,32 @@
             this.pShow.Controls.Add(this.label1);
             this.pShow.Controls.Add(this.tbENavn);
             this.pShow.Controls.Add(this.tbFNavn);
-            this.pShow.Location = new System.Drawing.Point(12, 107);
+            this.pShow.Location = new System.Drawing.Point(12, 90);
             this.pShow.Name = "pShow";
-            this.pShow.Size = new System.Drawing.Size(352, 196);
+            this.pShow.Size = new System.Drawing.Size(352, 213);
             this.pShow.TabIndex = 3;
+            // 
+            // labPlass
+            // 
+            this.labPlass.AutoSize = true;
+            this.labPlass.Location = new System.Drawing.Point(99, 15);
+            this.labPlass.Name = "labPlass";
+            this.labPlass.Size = new System.Drawing.Size(55, 13);
+            this.labPlass.TabIndex = 18;
+            this.labPlass.Text = "Plassering";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(17, 15);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(55, 13);
+            this.label9.TabIndex = 17;
+            this.label9.Text = "Plassering";
             // 
             // numNr
             // 
-            this.numNr.Location = new System.Drawing.Point(102, 77);
+            this.numNr.Location = new System.Drawing.Point(102, 90);
             this.numNr.Maximum = new decimal(new int[] {
             2,
             0,
@@ -203,7 +245,7 @@
             // 
             // btRight
             // 
-            this.btRight.Location = new System.Drawing.Point(181, 160);
+            this.btRight.Location = new System.Drawing.Point(181, 173);
             this.btRight.Name = "btRight";
             this.btRight.Size = new System.Drawing.Size(75, 23);
             this.btRight.TabIndex = 11;
@@ -213,7 +255,7 @@
             // 
             // btLeft
             // 
-            this.btLeft.Location = new System.Drawing.Point(100, 160);
+            this.btLeft.Location = new System.Drawing.Point(100, 173);
             this.btLeft.Name = "btLeft";
             this.btLeft.Size = new System.Drawing.Size(75, 23);
             this.btLeft.TabIndex = 9;
@@ -225,7 +267,7 @@
             // 
             this.starCheck.AutoCheck = false;
             this.starCheck.AutoSize = true;
-            this.starCheck.Location = new System.Drawing.Point(102, 130);
+            this.starCheck.Location = new System.Drawing.Point(102, 143);
             this.starCheck.Name = "starCheck";
             this.starCheck.Size = new System.Drawing.Size(61, 17);
             this.starCheck.TabIndex = 8;
@@ -235,7 +277,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(17, 106);
+            this.label4.Location = new System.Drawing.Point(17, 119);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(45, 13);
             this.label4.TabIndex = 7;
@@ -244,7 +286,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(17, 80);
+            this.label3.Location = new System.Drawing.Point(17, 93);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 6;
@@ -252,7 +294,7 @@
             // 
             // tbAddr
             // 
-            this.tbAddr.Location = new System.Drawing.Point(102, 103);
+            this.tbAddr.Location = new System.Drawing.Point(102, 116);
             this.tbAddr.Name = "tbAddr";
             this.tbAddr.Size = new System.Drawing.Size(152, 20);
             this.tbAddr.TabIndex = 5;
@@ -260,7 +302,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(17, 54);
+            this.label2.Location = new System.Drawing.Point(17, 67);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 4;
@@ -269,7 +311,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(17, 28);
+            this.label1.Location = new System.Drawing.Point(17, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(46, 13);
             this.label1.TabIndex = 3;
@@ -277,14 +319,14 @@
             // 
             // tbENavn
             // 
-            this.tbENavn.Location = new System.Drawing.Point(102, 51);
+            this.tbENavn.Location = new System.Drawing.Point(102, 64);
             this.tbENavn.Name = "tbENavn";
             this.tbENavn.Size = new System.Drawing.Size(152, 20);
             this.tbENavn.TabIndex = 1;
             // 
             // tbFNavn
             // 
-            this.tbFNavn.Location = new System.Drawing.Point(102, 25);
+            this.tbFNavn.Location = new System.Drawing.Point(102, 38);
             this.tbFNavn.Name = "tbFNavn";
             this.tbFNavn.Size = new System.Drawing.Size(152, 20);
             this.tbFNavn.TabIndex = 0;
@@ -308,6 +350,28 @@
             this.pNew.Size = new System.Drawing.Size(352, 196);
             this.pNew.TabIndex = 14;
             // 
+            // btAvbryt
+            // 
+            this.btAvbryt.Location = new System.Drawing.Point(102, 153);
+            this.btAvbryt.Name = "btAvbryt";
+            this.btAvbryt.Size = new System.Drawing.Size(73, 23);
+            this.btAvbryt.TabIndex = 18;
+            this.btAvbryt.Text = "Avbryt";
+            this.btAvbryt.UseVisualStyleBackColor = true;
+            this.btAvbryt.Click += new System.EventHandler(this.Cancel);
+            // 
+            // numNyNr
+            // 
+            this.numNyNr.Location = new System.Drawing.Point(102, 77);
+            this.numNyNr.Maximum = new decimal(new int[] {
+            2,
+            0,
+            0,
+            0});
+            this.numNyNr.Name = "numNyNr";
+            this.numNyNr.Size = new System.Drawing.Size(152, 20);
+            this.numNyNr.TabIndex = 17;
+            // 
             // btSave
             // 
             this.btSave.Location = new System.Drawing.Point(181, 153);
@@ -316,6 +380,7 @@
             this.btSave.TabIndex = 12;
             this.btSave.Text = "Lagre";
             this.btSave.UseVisualStyleBackColor = true;
+            this.btSave.Click += new System.EventHandler(this.btSave_Click);
             // 
             // checkSave
             // 
@@ -426,27 +491,6 @@
             this.mSlett.Text = "Slett oppføring";
             this.mSlett.Click += new System.EventHandler(this.mSlett_Click);
             // 
-            // numNyNr
-            // 
-            this.numNyNr.Location = new System.Drawing.Point(102, 77);
-            this.numNyNr.Maximum = new decimal(new int[] {
-            2,
-            0,
-            0,
-            0});
-            this.numNyNr.Name = "numNyNr";
-            this.numNyNr.Size = new System.Drawing.Size(152, 20);
-            this.numNyNr.TabIndex = 17;
-            // 
-            // btAvbryt
-            // 
-            this.btAvbryt.Location = new System.Drawing.Point(102, 153);
-            this.btAvbryt.Name = "btAvbryt";
-            this.btAvbryt.Size = new System.Drawing.Size(73, 23);
-            this.btAvbryt.TabIndex = 18;
-            this.btAvbryt.Text = "Avbryt";
-            this.btAvbryt.UseVisualStyleBackColor = true;
-            // 
             // adressebok
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -462,21 +506,21 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.m1;
             this.Name = "adressebok";
-            this.Text = "Adressebok";
+            this.Text = "mes";
             this.Load += new System.EventHandler(this.Adressebok_Load);
             this.pLogin.ResumeLayout(false);
             this.pLogin.PerformLayout();
             this.pSok.ResumeLayout(false);
             this.pSok.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.søkList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.sokList)).EndInit();
             this.pShow.ResumeLayout(false);
             this.pShow.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numNr)).EndInit();
             this.pNew.ResumeLayout(false);
             this.pNew.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numNyNr)).EndInit();
             this.m1.ResumeLayout(false);
             this.m1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numNyNr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -498,11 +542,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox tbENavn;
         private System.Windows.Forms.TextBox tbFNavn;
-        private System.Windows.Forms.DataGridView søkList;
-        private System.Windows.Forms.DataGridViewTextBoxColumn navn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nummer;
-        private System.Windows.Forms.DataGridViewTextBoxColumn adresse;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn fav;
+        private System.Windows.Forms.DataGridView sokList;
         private System.Windows.Forms.Button btSok;
         private System.Windows.Forms.TextBox tbSok;
         private System.Windows.Forms.Panel pNew;
@@ -523,6 +563,13 @@
         private System.Windows.Forms.ToolStripMenuItem mSlett;
         private System.Windows.Forms.NumericUpDown numNyNr;
         private System.Windows.Forms.Button btAvbryt;
+        private System.Windows.Forms.DataGridViewTextBoxColumn inx;
+        private System.Windows.Forms.DataGridViewTextBoxColumn navn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nummer;
+        private System.Windows.Forms.DataGridViewTextBoxColumn adresse;
+        private System.Windows.Forms.Button btCans;
+        private System.Windows.Forms.Label labPlass;
+        private System.Windows.Forms.Label label9;
     }
 }
 
