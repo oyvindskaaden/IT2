@@ -134,8 +134,6 @@ namespace Adressebok
 
         private void Presenter()
         {
-
-            
             try
             {
                 tbFNavn.Text = bok[index].Fornavn;
@@ -261,7 +259,9 @@ namespace Adressebok
                     }
                 }
             }
+            bok.Sort((x, y) => x.Etternavn.CompareTo(y.Etternavn));
         }
+        
 
         #endregion
     }
