@@ -77,14 +77,15 @@ namespace Adressebok
         {
             sokList.Rows.Clear();
 
+            string search = tbSok.Text.ToUpper();
             int i = 0;
             foreach (Oppføring p in bok)
             {
                 i++;
-                if (p.Fornavn.ToUpper().Contains(tbSok.Text.ToUpper()) || 
-                    p.Etternavn.ToUpper().Contains(tbSok.Text.ToUpper())|| 
-                    p.Adresse.ToUpper().Contains(tbSok.Text.ToUpper())|| 
-                    Convert.ToString(p.Nummer).ToUpper().Contains(tbSok.Text.ToUpper()))
+                if (p.Fornavn.ToUpper().Contains(search) || 
+                    p.Etternavn.ToUpper().Contains(search)|| 
+                    p.Adresse.ToUpper().Contains(search)|| 
+                    Convert.ToString(p.Nummer).ToUpper().Contains(search))
                 {
                     sokList.Rows.Add("" + i, p.Etternavn + ", " + p.Fornavn, Convert.ToString(p.Nummer), p.Adresse);
                 }
@@ -167,6 +168,7 @@ namespace Adressebok
         private void chOpp_Click(object sender, EventArgs e)
         {
             getNyTB();
+            nyOpp = false;
             btSave.Text = "Endre";
             ShowPanel(pNew);
         }
@@ -218,7 +220,9 @@ namespace Adressebok
 
         private void getSearch(object sender, DataGridViewCellEventArgs e)
         {
-            Console.WriteLine(sokList.Rows[e.RowIndex].Cells[0].Value);
+            index = Convert.ToInt32(sokList.Rows[e.RowIndex].Cells[0].Value) - 1;
+            Presenter();
+            ShowPanel(pShow);
         }
 
         #endregion
@@ -233,7 +237,6 @@ namespace Adressebok
             }
 
             File.WriteAllText(pathFile, "");
-
 
             using (StreamWriter sw = new StreamWriter(pathFile))
             {

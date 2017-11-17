@@ -70,7 +70,8 @@
             this.søkTM = new System.Windows.Forms.ToolStripMenuItem();
             this.newOpp = new System.Windows.Forms.ToolStripMenuItem();
             this.chOpp = new System.Windows.Forms.ToolStripMenuItem();
-            this.mSlett = new System.Windows.Forms.ToolStripMenuItem();
+            this.endreOppføringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.slettOppføringToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pLogin.SuspendLayout();
             this.pSok.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.sokList)).BeginInit();
@@ -296,6 +297,7 @@
             // 
             this.tbAddr.Location = new System.Drawing.Point(102, 116);
             this.tbAddr.Name = "tbAddr";
+            this.tbAddr.ReadOnly = true;
             this.tbAddr.Size = new System.Drawing.Size(152, 20);
             this.tbAddr.TabIndex = 5;
             // 
@@ -321,6 +323,7 @@
             // 
             this.tbENavn.Location = new System.Drawing.Point(102, 64);
             this.tbENavn.Name = "tbENavn";
+            this.tbENavn.ReadOnly = true;
             this.tbENavn.Size = new System.Drawing.Size(152, 20);
             this.tbENavn.TabIndex = 1;
             // 
@@ -328,6 +331,7 @@
             // 
             this.tbFNavn.Location = new System.Drawing.Point(102, 38);
             this.tbFNavn.Name = "tbFNavn";
+            this.tbFNavn.ReadOnly = true;
             this.tbFNavn.Size = new System.Drawing.Size(152, 20);
             this.tbFNavn.TabIndex = 0;
             // 
@@ -454,8 +458,7 @@
             this.m1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.søkTM,
             this.newOpp,
-            this.chOpp,
-            this.mSlett});
+            this.chOpp});
             this.m1.Location = new System.Drawing.Point(0, 0);
             this.m1.Name = "m1";
             this.m1.Size = new System.Drawing.Size(995, 24);
@@ -479,17 +482,26 @@
             // 
             // chOpp
             // 
+            this.chOpp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.endreOppføringToolStripMenuItem,
+            this.slettOppføringToolStripMenuItem});
             this.chOpp.Name = "chOpp";
-            this.chOpp.Size = new System.Drawing.Size(105, 20);
-            this.chOpp.Text = "Endre oppføring";
-            this.chOpp.Click += new System.EventHandler(this.chOpp_Click);
+            this.chOpp.Size = new System.Drawing.Size(59, 20);
+            this.chOpp.Text = "Rediger";
             // 
-            // mSlett
+            // endreOppføringToolStripMenuItem
             // 
-            this.mSlett.Name = "mSlett";
-            this.mSlett.Size = new System.Drawing.Size(98, 20);
-            this.mSlett.Text = "Slett oppføring";
-            this.mSlett.Click += new System.EventHandler(this.mSlett_Click);
+            this.endreOppføringToolStripMenuItem.Name = "endreOppføringToolStripMenuItem";
+            this.endreOppføringToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.endreOppføringToolStripMenuItem.Text = "Endre Oppføring";
+            this.endreOppføringToolStripMenuItem.Click += new System.EventHandler(this.chOpp_Click);
+            // 
+            // slettOppføringToolStripMenuItem
+            // 
+            this.slettOppføringToolStripMenuItem.Name = "slettOppføringToolStripMenuItem";
+            this.slettOppføringToolStripMenuItem.Size = new System.Drawing.Size(162, 22);
+            this.slettOppføringToolStripMenuItem.Text = "Slett Oppføring";
+            this.slettOppføringToolStripMenuItem.Click += new System.EventHandler(this.mSlett_Click);
             // 
             // adressebok
             // 
@@ -560,7 +572,6 @@
         private System.Windows.Forms.ToolStripMenuItem newOpp;
         private System.Windows.Forms.ToolStripMenuItem chOpp;
         private System.Windows.Forms.NumericUpDown numNr;
-        private System.Windows.Forms.ToolStripMenuItem mSlett;
         private System.Windows.Forms.NumericUpDown numNyNr;
         private System.Windows.Forms.Button btAvbryt;
         private System.Windows.Forms.DataGridViewTextBoxColumn inx;
@@ -570,6 +581,8 @@
         private System.Windows.Forms.Button btCans;
         private System.Windows.Forms.Label labPlass;
         private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.ToolStripMenuItem endreOppføringToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem slettOppføringToolStripMenuItem;
     }
 }
 
