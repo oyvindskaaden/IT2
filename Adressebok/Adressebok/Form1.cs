@@ -32,7 +32,7 @@ namespace Adressebok
         string file = "myContacs.csv";
         string pathFile;
 
-        char delimiter = ',';
+        char delimiter = '#';
 
         #endregion
 
@@ -59,8 +59,7 @@ namespace Adressebok
             bok.Add(new Oppføring("Torje", "Eikenes", 92938293, "Nibbaveien 10"));
             bok.Add(new Oppføring("Nibb", "Nibbsen", 42069420, "Nibbstveien 69"));
             */
-            //WriteFile();
-            ReadFile();
+            ReadFile(true, pathFile);
 
             Presenter();
         }
@@ -116,7 +115,7 @@ namespace Adressebok
             if (nyOpp)
             {
                 index = bok.Count;
-                bok.Add(new Oppføring(tbNyFNavn.Text, tbNyENavn.Text, Convert.ToInt32(numNyNr.Value), tbNyAddr.Text));
+                bok.Add(new Oppføring(tbNyFNavn.Text, tbNyENavn.Text, Convert.ToInt32(numNyNr.Value), tbNyAddr.Text, checkSave.Checked));
             }
             else if (!nyOpp)
             { 
@@ -128,7 +127,7 @@ namespace Adressebok
             }
 
             ShowPanel(pShow);
-            WriteFile();
+            WriteFile(true);
             Presenter();
         }
 
@@ -176,7 +175,7 @@ namespace Adressebok
 
             bok.RemoveAt(index);
             index = 0;
-            WriteFile();
+            WriteFile(true);
             Presenter();
         }
 
@@ -218,7 +217,14 @@ namespace Adressebok
 
         private void getSearch(object sender, DataGridViewCellEventArgs e)
         {
-            index = Convert.ToInt32(sokList.Rows[e.RowIndex].Cells[0].Value) - 1;
+            try
+            {
+                index = Convert.ToInt32(sokList.Rows[e.RowIndex].Cells[0].Value) - 1;
+            }
+            catch
+            {
+                index = 0;
+            }
             Presenter();
             ShowPanel(pShow);
         }
@@ -227,7 +233,7 @@ namespace Adressebok
 
         #region Lese og skrive til fil
 
-        private void WriteFile()
+        private void WriteFile(bool crypt)
         {
             if (!File.Exists(pathFile))
             {
@@ -240,29 +246,77 @@ namespace Adressebok
             {
                 foreach (Oppføring p in bok)
                 {
-                    sw.WriteLine(p.Fornavn + delimiter + p.Etternavn + delimiter + p.Nummer + delimiter + p.Adresse + delimiter + p.Favoritt);
+                    string write = p.Fornavn + delimiter + p.Etternavn + delimiter + p.Nummer + delimiter + p.Adresse + delimiter + p.Favoritt;
+                    string data = "";
+                    if (crypt)
+                    {
+                        foreach (char c in write)
+                        {
+                            if (c != delimiter)
+                            {
+                                char d = c;
+                                d += (char)2;
+                                data += d; //c + (char)2;
+                            }
+                            else
+                                data += c;
+                        }
+                    }
+                    else
+                    {
+                        data = write;
+                    }
+                    sw.WriteLine(data);
                 }
             }
         }
 
-        private void ReadFile()
+        private void ReadFile(bool crypt, string filePath)
         {
-            if (File.Exists(pathFile))
+            if (File.Exists(filePath))
             {
                 bok.Clear();
-                using(StreamReader sr = new StreamReader(pathFile))
+                using(StreamReader sr = new StreamReader(filePath))
                 {
                     while (!sr.EndOfStream)
                     {
-                        var data = sr.ReadLine().Split(delimiter);
+                        //var data = sr.ReadLine().Split(delimiter);
+                        string read = sr.ReadLine();
+                        string opRead = "";
+                        if (crypt)
+                        {
+                            foreach (char c in read)
+                            {
+                                if (c != delimiter)
+                                {
+                                    char d = c;
+                                    d -= (char)2;
+                                    opRead += d;
+                                }
+                                else
+                                {
+                                    opRead += c;
+                                }
+                            }
+                        }
+                        else
+                        {
+                            opRead = read;
+                        }
+                        var data = opRead.Split(delimiter);
                         bok.Add(new Oppføring(data[0], data[1], Convert.ToDecimal(data[2]), data[3], Convert.ToBoolean(data[4])));
                     }
                 }
             }
-            bok.Sort((x, y) => x.Etternavn.CompareTo(y.Etternavn));
+            //bok.Sort((x, y) => x.Etternavn.CompareTo(y.Etternavn));
         }
-        
+
 
         #endregion
+
+        private void Adressebok_Closed(object sender, FormClosedEventArgs e)
+        {
+            WriteFile(true);
+        }
     }
 }

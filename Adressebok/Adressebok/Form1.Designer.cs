@@ -116,7 +116,7 @@
             this.pSok.Controls.Add(this.btSok);
             this.pSok.Controls.Add(this.tbSok);
             this.pSok.Controls.Add(this.sokList);
-            this.pSok.Location = new System.Drawing.Point(381, 36);
+            this.pSok.Location = new System.Drawing.Point(370, 23);
             this.pSok.Name = "pSok";
             this.pSok.Size = new System.Drawing.Size(410, 280);
             this.pSok.TabIndex = 2;
@@ -349,7 +349,7 @@
             this.pNew.Controls.Add(this.label8);
             this.pNew.Controls.Add(this.tbNyENavn);
             this.pNew.Controls.Add(this.tbNyFNavn);
-            this.pNew.Location = new System.Drawing.Point(12, 317);
+            this.pNew.Location = new System.Drawing.Point(12, 309);
             this.pNew.Name = "pNew";
             this.pNew.Size = new System.Drawing.Size(352, 196);
             this.pNew.TabIndex = 14;
@@ -359,7 +359,7 @@
             this.btAvbryt.Location = new System.Drawing.Point(102, 153);
             this.btAvbryt.Name = "btAvbryt";
             this.btAvbryt.Size = new System.Drawing.Size(73, 23);
-            this.btAvbryt.TabIndex = 18;
+            this.btAvbryt.TabIndex = 6;
             this.btAvbryt.Text = "Avbryt";
             this.btAvbryt.UseVisualStyleBackColor = true;
             this.btAvbryt.Click += new System.EventHandler(this.Cancel);
@@ -374,14 +374,14 @@
             0});
             this.numNyNr.Name = "numNyNr";
             this.numNyNr.Size = new System.Drawing.Size(152, 20);
-            this.numNyNr.TabIndex = 17;
+            this.numNyNr.TabIndex = 2;
             // 
             // btSave
             // 
             this.btSave.Location = new System.Drawing.Point(181, 153);
             this.btSave.Name = "btSave";
             this.btSave.Size = new System.Drawing.Size(73, 23);
-            this.btSave.TabIndex = 12;
+            this.btSave.TabIndex = 5;
             this.btSave.Text = "Lagre";
             this.btSave.UseVisualStyleBackColor = true;
             this.btSave.Click += new System.EventHandler(this.btSave_Click);
@@ -392,7 +392,7 @@
             this.checkSave.Location = new System.Drawing.Point(102, 130);
             this.checkSave.Name = "checkSave";
             this.checkSave.Size = new System.Drawing.Size(61, 17);
-            this.checkSave.TabIndex = 8;
+            this.checkSave.TabIndex = 4;
             this.checkSave.Text = "Favoritt";
             this.checkSave.UseVisualStyleBackColor = true;
             // 
@@ -419,7 +419,7 @@
             this.tbNyAddr.Location = new System.Drawing.Point(102, 103);
             this.tbNyAddr.Name = "tbNyAddr";
             this.tbNyAddr.Size = new System.Drawing.Size(152, 20);
-            this.tbNyAddr.TabIndex = 5;
+            this.tbNyAddr.TabIndex = 3;
             // 
             // label7
             // 
@@ -518,7 +518,8 @@
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.m1;
             this.Name = "adressebok";
-            this.Text = "mes";
+            this.Text = "Adressebok";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Adressebok_Closed);
             this.Load += new System.EventHandler(this.Adressebok_Load);
             this.pLogin.ResumeLayout(false);
             this.pLogin.PerformLayout();
