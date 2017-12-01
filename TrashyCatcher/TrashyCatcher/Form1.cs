@@ -19,11 +19,30 @@ namespace TrashyCatcher
 
         Ball ball1;
 
+        List<Ball> baller = new List<Ball>();
+
         Random rnd = new Random();
 
         private void button1_Click(object sender, EventArgs e)
         {
-            ball1 = new Ball(rnd.Next(this.Width), rnd.Next(this.Height), 40, 40, this);
+            //baller.Clear();
+            //baller.Add(new Ball(rnd.Next(this.Width), rnd.Next(this.Height), 40, 40, this));
+
+            baller.Add(new Ball(40, 100 ,rnd.Next(89), rnd.Next(10,100), this));
+        }
+
+        private void Update(object sender, EventArgs e)
+        {
+            //baller[0].Update();
+            foreach (Ball b in baller)
+            {
+                b.Update(this);
+            }
+        }
+
+        private void Spill_Load(object sender, EventArgs e)
+        {
+            tick.Start();
         }
     }
 }
