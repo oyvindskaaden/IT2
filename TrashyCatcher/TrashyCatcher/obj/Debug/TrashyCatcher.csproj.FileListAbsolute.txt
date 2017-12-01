@@ -1,0 +1,10 @@
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\bin\Debug\TrashyCatcher.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\bin\Debug\TrashyCatcher.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\bin\Debug\TrashyCatcher.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.csprojResolveAssemblyReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.Spill.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\TrashyCatcher\TrashyCatcher\obj\Debug\TrashyCatcher.pdb
