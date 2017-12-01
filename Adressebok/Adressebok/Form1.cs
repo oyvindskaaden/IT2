@@ -20,6 +20,8 @@ namespace Adressebok
 
         #region Globale variabler
 
+        string pw = "12345678";
+
         int index = 0;
 
         bool nyOpp = false;
@@ -36,6 +38,7 @@ namespace Adressebok
 
         #endregion
 
+        // Deklarerer mange veriabler som må gjøres inne i en metode
         private void Adressebok_Load(object sender, EventArgs e)
         {
             pathFile = pathDocuments + "\\" + file;
@@ -64,14 +67,19 @@ namespace Adressebok
             Presenter();
         }
         
-
+        // Sjekker at passordet stemmer
         private void btLogin_Click(object sender, EventArgs e)
         {
-            ShowPanel(pShow);
-            m1.Visible = true;
+            if (tbPass.Text == pw)
+            {
+                ShowPanel(pShow);
+                m1.Visible = true;
+            }
+            
 
         }
 
+        // Søker gjennom listen med oppføringer og legger de som stemmer inn i dataGridView
         private void btSearch_Click(object sender, EventArgs e)
         {
             sokList.Rows.Clear();
@@ -91,6 +99,7 @@ namespace Adressebok
             }
         }
 
+        // Enderer hvilken oppføring som vises
         private void btNav(object sender, EventArgs e)
         {
             Button b = sender as Button;
@@ -110,6 +119,7 @@ namespace Adressebok
             Presenter();
         }
 
+        // Lagrer ny hvis "Ny oppføring" er klikket, og enderer en eksisterende oppføring dersom "Endre oppføring" klikkes
         private void btSave_Click(object sender, EventArgs e)
         {
             if (nyOpp)
@@ -131,6 +141,7 @@ namespace Adressebok
             Presenter();
         }
 
+        // Setter inn verdier i tekstboksene på visningssiden
         private void Presenter()
         {
             try
@@ -172,7 +183,6 @@ namespace Adressebok
 
         private void mSlett_Click(object sender, EventArgs e)
         {
-
             bok.RemoveAt(index);
             index = 0;
             WriteFile(true);
@@ -256,7 +266,7 @@ namespace Adressebok
                             {
                                 char d = c;
                                 d += (char)2;
-                                data += d; //c + (char)2;
+                                data += d; 
                             }
                             else
                                 data += c;
