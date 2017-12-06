@@ -1,0 +1,5 @@
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.csprojResolveAssemblyReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.PONG.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.csproj.CoreCompileInputs.cache
