@@ -19,14 +19,24 @@ namespace PONG
 
         #region Variabler
 
-        Bat bats;
+        Bat[] bats;
         #endregion 
 
         private void KeyPressed(object sender, KeyPressEventArgs e)
         {
-            switch (e.KeyChar)
+            
+        }
+
+        private void PONG_Load(object sender, EventArgs e)
+        {
+            bats = new Bat[2] { new Bat(this, 'R', false), new Bat(this, 'L', false) };
+        }
+
+        private void resizeGame(object sender, EventArgs e)
+        {
+            foreach(Bat b in bats)
             {
-                case 'n': bats = new Bat(this, 'R', false); break;
+                b.UpdateSize(this);
             }
         }
     }

@@ -12,7 +12,6 @@ namespace PONG
     {
         #region Variabler
 
-        Form gameForm;
 
         int xPos;
         int yPos;
@@ -22,10 +21,15 @@ namespace PONG
         
         // Margin for Bat fra kantene
         int size;
-        int sizeFactor = 5;
+        int sizeFactor = 3;
+
+        // Bool for hvilken spiller det er
+        Boolean leftPlayer;
 
         int batHeight;
-        int batHeightFactor = 2;
+        int batHeightFactor = 3;
+
+        PictureBox bat = new PictureBox();
 
         #endregion
 
@@ -35,9 +39,8 @@ namespace PONG
 
         public Bat(Form form, Char player, Boolean AI)
         {
-            gameForm = form;
-            gameWidth = gameForm.ClientRectangle.Width;
-            gameHeight = gameForm.ClientRectangle.Height;
+            gameWidth = form.ClientRectangle.Width;
+            gameHeight = form.ClientRectangle.Height;
 
             size = gameWidth * sizeFactor / 100;
 
@@ -47,12 +50,42 @@ namespace PONG
             
             switch (player)
             {
-                case 'R': xPos = gameWidth - (2 * size); break;
-                case 'L': xPos = size;  break;
+                case 'R': xPos = gameWidth - (2 * size); leftPlayer = false; break;
+                case 'L': xPos = size; leftPlayer = true; break;
             }
 
-            Rectangle bat = new Rectangle(xPos, yPos, size, batHeight);
+            bat.Image = Properties.Resources.pixel;
+            bat.Size = new Size(size, batHeight);
+            bat.SizeMode = PictureBoxSizeMode.StretchImage;
+            bat.Location = new Point(xPos, yPos);
+
+            form.Controls.Add(bat);
                         
+        }
+        #endregion
+
+        #region Public metoder
+
+        public void UpdateSize(Form form)
+        {
+
+            gameWidth = form.ClientRectangle.Width;
+            gameHeight = form.ClientRectangle.Height;
+
+            size = gameWidth * sizeFactor / 100;
+
+            batHeight = gameHeight * batHeightFactor / 10;
+
+            yPos = (gameHeight / 2) - (batHeight / 2);
+
+            if (leftPlayer)
+                xPos = gameWidth - (2 * size);
+            else
+                xPos = size;
+            
+            bat.Size = new Size(size, batHeight);
+            bat.Location = new Point(xPos, yPos);
+            
         }
         #endregion
     }

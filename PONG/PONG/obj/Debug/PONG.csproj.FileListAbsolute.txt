@@ -3,3 +3,8 @@ C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.PONG.reso
 C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.Properties.Resources.resources
 C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.csproj.GenerateResource.Cache
 C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\bin\Debug\PONG.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\bin\Debug\PONG.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\bin\Debug\PONG.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PONG\PONG\obj\Debug\PONG.pdb
