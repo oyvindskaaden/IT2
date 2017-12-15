@@ -22,9 +22,15 @@ namespace PONG
         Bat[] bats;
         #endregion 
 
-        private void KeyPressed(object sender, KeyPressEventArgs e)
+        private void PressedKey(object sender, KeyEventArgs e)
         {
-            
+            switch (e.KeyData)
+            {
+                case Keys.W: bats[1].MoveUp(); break;
+                case Keys.S: bats[1].MoveDown(); break;
+                case Keys.Up: bats[0].MoveUp(); break;
+                case Keys.Down: bats[0].MoveDown(); break;
+            }
         }
 
         private void PONG_Load(object sender, EventArgs e)
@@ -39,5 +45,6 @@ namespace PONG
                 b.UpdateSize(this);
             }
         }
+
     }
 }

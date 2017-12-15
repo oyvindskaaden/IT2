@@ -35,12 +35,13 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
-            this.ClientSize = new System.Drawing.Size(919, 563);
+            this.ClientSize = new System.Drawing.Size(686, 478);
+            this.MinimumSize = new System.Drawing.Size(220, 160);
             this.Name = "PONG";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "PONG";
             this.Load += new System.EventHandler(this.PONG_Load);
-            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.KeyPressed);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.PressedKey);
             this.Resize += new System.EventHandler(this.resizeGame);
             this.ResumeLayout(false);
 
