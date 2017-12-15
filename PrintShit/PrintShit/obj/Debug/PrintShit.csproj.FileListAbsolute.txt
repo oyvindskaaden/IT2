@@ -1,0 +1,9 @@
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\bin\Debug\PrintShit.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\bin\Debug\PrintShit.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\bin\Debug\PrintShit.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\obj\Debug\PrintShit.Form1.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\obj\Debug\PrintShit.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\obj\Debug\PrintShit.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\obj\Debug\PrintShit.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\obj\Debug\PrintShit.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrintShit\PrintShit\obj\Debug\PrintShit.pdb
