@@ -1,0 +1,20 @@
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.csprojResolveAssemblyReference.cache
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.Form1.resources
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.Properties.Resources.resources
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.csproj.GenerateResource.Cache
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.csproj.CoreCompileInputs.cache
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\bin\Debug\PrøveDes2017_A.exe.config
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\bin\Debug\PrøveDes2017_A.exe
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\bin\Debug\PrøveDes2017_A.pdb
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.exe
+C:\Users\rholm\source\repos\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\bin\Debug\PrøveDes2017_A.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\bin\Debug\PrøveDes2017_A.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\bin\Debug\PrøveDes2017_A.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.csprojResolveAssemblyReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.Form1.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\PrøveDes2017_A\PrøveDes2017_A\obj\Debug\PrøveDes2017_A.pdb
