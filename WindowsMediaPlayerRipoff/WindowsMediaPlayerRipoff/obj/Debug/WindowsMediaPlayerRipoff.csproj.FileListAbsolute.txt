@@ -1,0 +1,15 @@
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\bin\Debug\WindowsMediaPlayerRipoff.exe.config
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\bin\Debug\WindowsMediaPlayerRipoff.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\bin\Debug\WindowsMediaPlayerRipoff.pdb
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\bin\Debug\Interop.WMPLib.dll
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\bin\Debug\AxInterop.WMPLib.dll
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.csprojResolveAssemblyReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\Interop.WMPLib.dll
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\AxInterop.WMPLib.dll
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.csproj.ResolveComReference.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.Form1.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.Properties.Resources.resources
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.csproj.GenerateResource.Cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.csproj.CoreCompileInputs.cache
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.exe
+C:\Users\Øyvind Skaaden\Documents\GitHub\IT2\WindowsMediaPlayerRipoff\WindowsMediaPlayerRipoff\obj\Debug\WindowsMediaPlayerRipoff.pdb
